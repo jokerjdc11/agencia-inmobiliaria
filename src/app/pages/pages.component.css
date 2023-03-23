@@ -1,0 +1,45 @@
+.btn-menu {
+    margin-left: 10px;
+    border: none;
+    -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    padding: 0;
+}
+
+.img-menu {
+    width: 40px;
+    height: 40px;
+}
+
+.title-in {
+    margin-right: 50px;
+}
+
+.offcanvas-body {
+    margin-left: -10px;
+}
+
+.pages-anc {
+    text-decoration: none;
+}
+
+.py-2 {
+    margin-left: 10px;
+    font-size: medium;
+    padding-left: 20px;
+    color: #000;
+}
+
+.py-2:hover {
+    background-color: rgb(66, 206, 248);
+    transition: 0.6s;
+}
+
+.content-table {
+    margin: 50px 20px;
+    -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
+    padding: 10px 20px;
+}
