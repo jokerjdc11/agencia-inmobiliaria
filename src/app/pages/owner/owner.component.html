@@ -1,7 +1,9 @@
 <h3 class="text-center m-4">Propietarios</h3>
+<button type="button" class="btn btn-success" (click)="goToCreate()">Crear</button><br><br>
 <table class="table table-striped table-hover">
     <thead>
       <tr>
+        <th scope="col">Id</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellidos</th>
         <th scope="col">Dirección</th>
@@ -10,26 +12,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>Elisabet</th>
-        <td>Castaño Salazar</td>
-        <td>Cra 1J #48E - 42</td>
-        <td>1053871025</td>
-        <td>3217691851</td>
-      </tr>
-      <tr>
-          <th>Juan David</th>
-          <td>Calle</td>
-          <td>Cra 2J #48E - 42</td>
-          <td>1053872025</td>
-          <td>3217692851</td>
-      </tr>
-      <tr>
-          <th>Luis Felipe</th>
-          <td>Villalba</td>
-          <td>Cra 3J #48E - 42</td>
-          <td>1053371025</td>
-          <td>3217391851</td>
+      <tr *ngFor="let owner of this.admin.owners; index as i">
+        <th scope="row">{{owner.id}}</th>
+        <td>{{owner.name}}</td>
+        <td>{{owner.last_name}}</td>
+        <td>{{owner.address}}</td>
+        <td>{{owner.identification}}</td>
+        <td>{{owner.phone_number}}</td>
+        <td><button type="button" class="btn btn-primary">Editar</button></td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteRegister(i)">Eliminar</button></td>
       </tr>
     </tbody>
   </table>
