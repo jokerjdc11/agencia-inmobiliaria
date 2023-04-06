@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { AdminService } from '../../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-owner',
@@ -9,12 +10,13 @@ import { AdminService } from '../../admin.service';
 })
 export class OwnerComponent {
 
-  constructor(public admin: AdminService) { }
+  constructor(public admin: AdminService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToCreate() {
+    this.router.navigate(['pages/owners/create'])
   }
 
   deleteRegister(pos: any) {

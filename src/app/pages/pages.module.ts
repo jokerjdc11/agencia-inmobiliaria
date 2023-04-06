@@ -8,7 +8,12 @@ import { OwnerComponent } from './owner/owner.component';
 import { OfficeComponent } from './office/office.component';
 import { ClientComponent } from './client/client.component';
 import { VisitComponent } from './visit/visit.component';
-
+import { CreateComponent } from './client/create/create.component';
+import { CreateInmobiliariaComponent } from './inmobiliaria/create/create.component';
+import { FormsModule } from '@angular/forms';
+import { CreateOfficeComponent } from './office/create-office/create-office.component';
+import { CreateOwnerComponent } from './owner/create-owner/create-owner.component';
+import { CreateVisitComponent } from './visit/create-visit/create-visit.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +22,17 @@ import { VisitComponent } from './visit/visit.component';
     OwnerComponent,
     OfficeComponent,
     ClientComponent,
-    VisitComponent
+    VisitComponent,
+    CreateComponent,
+    CreateInmobiliariaComponent,
+    CreateOfficeComponent,
+    CreateOwnerComponent,
+    CreateVisitComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

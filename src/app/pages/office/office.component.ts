@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AdminService } from '../../admin.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-office',
@@ -9,12 +10,13 @@ import Swal from 'sweetalert2';
 })
 export class OfficeComponent {
 
-  constructor(public admin: AdminService) { }
+  constructor(public admin: AdminService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToCreate() {
+    this.router.navigate(['pages/offices/create'])
   }
 
   deleteRegister(pos: any) {
