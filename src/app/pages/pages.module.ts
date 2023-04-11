@@ -21,7 +21,7 @@ import { VisitComponent } from './visit/visit.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
   ]
 })
 export class PagesModule { }

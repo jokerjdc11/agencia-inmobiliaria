@@ -35,11 +35,3 @@
     background-color: rgb(66, 206, 248);
     transition: 0.6s;
 }
-
-.content-table {
-    margin: 50px 20px;
-    -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
-    padding: 10px 20px;
-}

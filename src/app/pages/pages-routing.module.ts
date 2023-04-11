@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client/client.component';
 import { InmobiliariaComponent } from './inmobiliaria/inmobiliaria.component';
+import { LoginComponent } from './login/login/login.component';
 import { OfficeComponent } from './office/office.component';
 import { OwnerComponent } from './owner/owner.component';
 import { PagesComponent } from './pages.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
       path: 'visits',
       component: VisitComponent
       },
+      {
+        path: "**" ,
+        component: LoginComponent
+      }
     ],
   },
 ];
