@@ -7,6 +7,11 @@ import { OfficeComponent } from './office/office.component';
 import { OwnerComponent } from './owner/owner.component';
 import { PagesComponent } from './pages.component';
 import { VisitComponent } from './visit/visit.component';
+import { CreateComponent } from './client/create/create.component';
+import { CreateInmobiliariaComponent } from './inmobiliaria/create/create.component';
+import { CreateOfficeComponent } from './office/create-office/create-office.component';
+import { CreateOwnerComponent } from './owner/create-owner/create-owner.component';
+import { CreateVisitComponent } from './visit/create-visit/create-visit.component';
 
 const routes: Routes = [
   {
@@ -14,28 +19,49 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
-      path: 'clients',
-      component: ClientComponent
+        path: 'clients',
+        component: ClientComponent
       },
       {
-      path: 'inmobiliaria',
-      component: InmobiliariaComponent
+        path: 'inmobiliaria',
+        component: InmobiliariaComponent
       },
       {
-      path: 'offices',
-      component: OfficeComponent
+        path: 'offices',
+        component: OfficeComponent
       },
       {
-      path: 'owners',
-      component: OwnerComponent
+        path: 'owners',
+        component: OwnerComponent
       },
       {
-      path: 'visits',
-      component: VisitComponent
+        path: 'visits',
+        component: VisitComponent
       },
       {
+<<<<<<< HEAD
         path: "**" ,
         component: LoginComponent
+=======
+        path: 'client/create',
+        component: CreateComponent
+      },
+      {
+        path: 'inmobiliaria/create',
+        component: CreateInmobiliariaComponent
+      },
+      {
+        path: 'offices/create',
+        component: CreateOfficeComponent
+      },
+      {
+        path: 'owners/create',
+        component: CreateOwnerComponent
+      },
+      {
+        path: 'visits/create',
+        component: CreateVisitComponent
+>>>>>>> develop
       }
     ],
   },
