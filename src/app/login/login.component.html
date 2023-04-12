@@ -1,16 +1,56 @@
-<div class="row justify-content-center">
-  <div class="col-6">
-    <h3 class="text-center m-4">Iniciar sesión</h3>
-    <div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input [(ngModel)]="email" class="form-control" id="exampleInputEmail1">
+<div class="wrapper">
+    <span class="icon-help">
+        <i class="fa-solid fa-circle-info"></i>
+    </span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <div class="input-box">
+            <span class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+            <input type="email" [(ngModel)]="email">
+            <label>Email</label>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input [(ngModel)]="password" type="password" class="form-control" id="exampleInputPassword1">
+        <div class="input-box">
+            <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+            <input type="password" [(ngModel)]="password">
+            <label>Password</label>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+        <div class="remerber-forgot">
+            <label for="">
+                    <input type="checkbox">
+                    Recuerdame
+                </label>
+            <a href="#">Olvidaste la contraseña</a>
+        </div>
+        <button type="submit" class="btn-login" (click)="login()">Login</button>
+        <div class="login-register">
+            <p>
+                Desea registrarse?
+                <a href="#" class="register-link">
+                        Registrar
+                    </a>
+            </p>
+        </div>
     </div>
-  </div>
+
 </div>
+
+<!-- <div class="row justify-content-center">
+    <div class="col-6">
+        <h3 class="text-center m-4">Iniciar sesión</h3>
+        <div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input [(ngModel)]="email" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input [(ngModel)]="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+        </div>
+    </div>
+</div> -->

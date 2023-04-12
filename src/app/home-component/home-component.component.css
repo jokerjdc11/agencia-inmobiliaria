@@ -1,0 +1,20 @@
+.caja-home {
+    position: relative;
+    width: 800px;
+    height: 440px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.caja-home h2 {
+    font-size: 2em;
+    color: #0c1114;
+    text-align: center;
+}
