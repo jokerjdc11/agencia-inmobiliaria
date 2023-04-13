@@ -1,20 +1,163 @@
-.caja-home {
-    position: relative;
-    width: 800px;
-    height: 440px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 5);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html {
     overflow: hidden;
+    height: 100%;
 }
 
-.caja-home h2 {
-    font-size: 2em;
-    color: #0c1114;
+body {
+    font-family: "Ubuntu";
+    color: black;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+
+}
+
+header img {
+    width: 12vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header,
+header:before {
+    background: 50% 50% / cover;
+
+}
+
+header * {
+    font-weight: normal;
+    letter-spacing: 0.3em;
     text-align: center;
+    color: white;
+}
+
+.main-contain {
+    margin-top: 500px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    padding-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 300;
+}
+
+h1.anim {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+p.anim {
+    width: 60%;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* .work */
+
+.work {
+    text-align: center;
+    width: 100%;
+}
+
+.work img {
+    margin: 1%;
+    width: 350px;
+    height: 400px;
+    transition: .4s ease;
+}
+
+.work img:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 4px red;
+    -webkit-box-shadow: 0px 0px 4px #111111;
+}
+
+/* header2 */
+
+.header2 {
+    margin: 100px 200px auto;
+}
+
+/* .work2 */
+.work2 {
+    width: 100%;
+    text-align: center;
+}
+
+.work2 img {
+    margin: 1%;
+    width: 420px;
+    height: 400px;
+}
+
+@media only screen and (max-width: 991px) {
+
+    header img {
+        width: 30%;
+    }
+
+    header p {
+
+        width: 90%;
+        margin: auto;
+    }
+
+    .work img {
+        margin: 2%;
+        width: 90%;
+    }
+
+    .header2 {
+        margin: 130px 0 40px 12px;
+    }
+
+    .header2 h1 {
+        font-size: 36px;
+    }
+
+    .header2 p {
+        width: 90%;
+    }
+
+    .work2 img {
+        margin: 2%;
+    }
+
 }
