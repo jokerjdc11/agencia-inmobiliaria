@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -8,13 +8,15 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 
+@Injectable()
 export class LoginComponent implements OnInit {
 
+  token:string ="admintoken";
   email: string = '';
   password: string = '';
 
   emailReg: string = 'admin@gmail.com';
-  passReg: string = 'admin1234';
+  passReg: string = '1234';
 
   constructor(private router: Router) { }
 
@@ -27,8 +29,8 @@ export class LoginComponent implements OnInit {
         'Bienvenido!',
         'Puedes ingresar al sistema!',
         'success'
-      );
-      this.router.navigate(['pages/inmobiliarias'])
+      ).then()
+      this.router.navigate(['pages'])
     } else {
       Swal.fire(
         'Error!',
@@ -37,4 +39,5 @@ export class LoginComponent implements OnInit {
       )
     }
   }
+
 }
