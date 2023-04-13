@@ -6,6 +6,15 @@ import { Injectable } from '@angular/core';
 export class AdminService {
   registerCurrent: any;
 
+  root = [
+    {
+    "email": "admin@gmail.com",
+    "password": "1234",
+    "state" : false,
+    "mensaje": "logIn"
+    }
+  ]
+
   clients = [
     {
       "id": 1,

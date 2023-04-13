@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-login',
@@ -11,25 +12,26 @@ import Swal from 'sweetalert2';
 @Injectable()
 export class LoginComponent implements OnInit {
 
-  token:string ="admintoken";
   email: string = '';
   password: string = '';
 
-  emailReg: string = 'admin@gmail.com';
-  passReg: string = '1234';
+  usuario = this.admin.root.find(dato => dato.
+    toString()
+  );
 
-  constructor(private router: Router) { }
+  constructor(public admin: AdminService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   login() {
-    if (this.email === this.emailReg && this.password === this.passReg) {
+    if (this.email == this.usuario?.email && this.password == this.usuario.password) {
       Swal.fire(
         'Bienvenido!',
         'Puedes ingresar al sistema!',
         'success'
       ).then()
+      this.usuario.state = true;
       this.router.navigate(['pages'])
     } else {
       Swal.fire(
@@ -40,4 +42,12 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  logOut(){
+    let user = this.admin.root.find(dato => dato.
+      toString()
+    );
+    if (user) {
+      user.state = false;
+  }
+  }
 }

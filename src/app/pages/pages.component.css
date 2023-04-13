@@ -1,10 +1,24 @@
+.navbar-home {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    opacity: 0.8;
+}
+
 .btn-menu {
-    margin-left: 10px;
+    margin-left: -60px;
     border: none;
     -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     padding: 0;
+    transition: 0.8s;
 }
 
 .img-menu {
@@ -37,9 +51,8 @@
 }
 
 .content-table {
-    margin: 50px 20px;
+    margin: -210px 20px;
     -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
-    padding: 10px 20px;
 }

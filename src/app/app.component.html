@@ -11,7 +11,10 @@
             <a href="/quienes">Quienes somos</a>
             <a href="/proyectos">Disponibilidad</a>
             <a href="/contacto">Contactanos</a>
-            <a class="btnLogin-popup" href="/login">Log In</a>
+            <a *ngIf="user; else sinRegistrar" class="btnLogin-popup" href="/login">{{mensaje}}</a>
+            <ng-template #sinRegistrar>
+                <a class="btnLogin-popup" href="/login">{{mensaje}}</a>
+            </ng-template>
         </nav>
     </header>
 
