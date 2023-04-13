@@ -1,0 +1,9 @@
+.container {
+    width: 450px;
+    height: 640px;
+    background-color: ghostwhite;
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    color: darkblue;
+    border-radius: 25px;
+}

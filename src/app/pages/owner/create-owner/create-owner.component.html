@@ -1,38 +1,54 @@
-<h3 class="text-center m-4">Crear propietario</h3>
-<div class="row">
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Id</label>
-            <input [(ngModel)]="owner.id" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="container">
+
+    <h3 class="text-center m-4">Crear propietario</h3>
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Id</label>
+                <input [(ngModel)]="owner.id" type="number" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input [(ngModel)]="owner.name" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Apellidos</label>
+                <input [(ngModel)]="owner.last_name" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre</label>
-            <input [(ngModel)]="owner.name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                <input [(ngModel)]="owner.phone_number" type="number" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Dirección</label>
+                <input [(ngModel)]="owner.address" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Identificación</label>
+                <input [(ngModel)]="owner.identification" type="number" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div>
         </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Apellidos</label>
-            <input [(ngModel)]="owner.last_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="position-relative mt-5">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <button type="submit" class="btn btn-primary" (click)="addRegister()">{{admin.registerCurrent ? 'Editar'
+                    :
+                    'Agregar'}}</button>
+            </div>
         </div>
     </div>
 
-    <div class="col-6">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Telefono</label>
-            <input [(ngModel)]="owner.phone_number" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Dirección</label>
-            <input [(ngModel)]="owner.address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Identificación</label>
-            <input [(ngModel)]="owner.identification" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <button type="submit" class="btn btn-primary" (click)="addRegister()">{{admin.registerCurrent ? 'Editar' : 'Agregar'}}</button>
-    </div>
 </div>
