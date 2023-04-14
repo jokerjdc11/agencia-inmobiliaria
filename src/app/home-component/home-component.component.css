@@ -1,6 +1,5 @@
 html {
     overflow: hidden;
-    height: 100%;
 }
 
 body {
@@ -13,17 +12,15 @@ body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-
 }
 
 header {
     box-sizing: border-box;
-    min-height: 100vh;
-    width: 100vw;
-    padding: 30vw 0 5vw;
+    min-height: 98vh;
+    width: 98vw;
+    padding: 30vw 0 0vw;
     position: relative;
     transform-style: inherit;
-
 }
 
 header img {
@@ -32,7 +29,6 @@ header img {
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
-
 }
 
 header h1 {
@@ -42,7 +38,6 @@ header h1 {
 header,
 header:before {
     background: 50% 50% / cover;
-
 }
 
 header * {
@@ -87,8 +82,6 @@ p.anim {
 }
 
 
-
-
 /* .work */
 
 .work {
@@ -109,13 +102,16 @@ p.anim {
     -webkit-box-shadow: 0px 0px 4px #111111;
 }
 
+
 /* header2 */
 
 .header2 {
     margin: 100px 200px auto;
 }
 
+
 /* .work2 */
+
 .work2 {
     width: 100%;
     text-align: center;
@@ -128,36 +124,27 @@ p.anim {
 }
 
 @media only screen and (max-width: 991px) {
-
     header img {
         width: 30%;
     }
-
     header p {
-
         width: 90%;
         margin: auto;
     }
-
     .work img {
         margin: 2%;
         width: 90%;
     }
-
     .header2 {
         margin: 130px 0 40px 12px;
     }
-
     .header2 h1 {
         font-size: 36px;
     }
-
     .header2 p {
         width: 90%;
     }
-
     .work2 img {
         margin: 2%;
     }
-
 }
