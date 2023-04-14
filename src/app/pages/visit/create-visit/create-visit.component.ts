@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
   templateUrl: './create-visit.component.html',
   styleUrls: ['./create-visit.component.css']
 })
-export class CreateVisitComponent implements OnInit{
+export class CreateVisitComponent implements OnInit {
 
   visit = {
     'id': 0,
@@ -26,10 +26,29 @@ export class CreateVisitComponent implements OnInit{
     }
   }
 
-  addRegister(){
-    Swal.fire('Exito!', 'El registro ha sido ingresado', 'success');
+  addRegister() {
+    if (this.admin.registerCurrent) {
 
-    this.admin.visits.unshift(this.visit);
-    this.router.navigate(['pages/visits']);
+      let objeto = this.admin.registerCurrent;
+      let id = objeto.id;
+      let posicionActual = this.admin.visits[id - 1];
+
+      let lafechaesta = objeto.date.replace("T", " ");
+      console.log(typeof(lafechaesta));
+      
+      let comment = objeto.comment;
+      posicionActual.id = id;
+      posicionActual.date = lafechaesta;
+      posicionActual.comment = comment;
+      console.log(posicionActual);
+
+
+      Swal.fire('Exito!', 'Que bien, esto ha servido, yuju! hip hip urra', 'success');
+      this.router.navigate(['pages/visits']);
+    } else {
+      Swal.fire('Exito!', 'El registro ha sido ingresado', 'success');
+      this.admin.visits.unshift(this.visit);
+      this.router.navigate(['pages/visits']);
+    }
   }
 }

@@ -37,5 +37,10 @@ export class OwnerComponent {
         Swal.fire('Changes are not saved', '', 'info')
       }
     })
-  }
+  };
+
+  editRegister(owner: any) {
+    this.admin.registerCurrent = owner;
+    this.router.navigate(['pages/client/create']);
+  };
 }

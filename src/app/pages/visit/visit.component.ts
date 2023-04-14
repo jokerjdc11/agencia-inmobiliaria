@@ -38,5 +38,12 @@ export class VisitComponent {
         Swal.fire('Changes are not saved', '', 'info')
       }
     })
-  }
+  };
+
+  editRegister(visit: any) {
+    this.admin.registerCurrent = visit;
+    this.router.navigate(['pages/visits/create']);
+  };
+
+
 }

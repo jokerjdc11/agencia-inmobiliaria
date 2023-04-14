@@ -31,7 +31,7 @@
                 <td>{{inmobiliaria.parqueadero}}</td>
                 <td>{{inmobiliaria.precio}}</td>
                 <td>{{inmobiliaria.referencia}}</td>
-                <td><button type="button" class="btn btn-primary">Editar</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="editRegister(inmobiliaria)">Editar</button></td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRegister(i)">Eliminar</button></td>
             </tr>
         </tbody>
