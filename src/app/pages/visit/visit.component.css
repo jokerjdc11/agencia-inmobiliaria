@@ -1,9 +1,14 @@
 .contenido-table {
+    margin-top: 150px;
+    width: 1200px;
+    height: 450px;
+    overflow: scroll;
     background-color: ghostwhite;
     font-family: 'FontAwesome';
-    font-size: 15px;
+    font-size: 10px;
     color: darkblue;
     border-radius: 25px;
-    padding: 20px;
-    opacity: 0.9;
+    padding: 10px 50px;
+    background: co;
+    border-top-right-radius: 20px;
 }

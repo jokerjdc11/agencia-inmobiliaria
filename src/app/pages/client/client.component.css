@@ -1,8 +1,10 @@
-.container {
+.content-tab {
+    margin-top: 150px;
     background-color: ghostwhite;
     font-family: 'FontAwesome';
-    font-size: 15px;
+    font-size: 12px;
     color: darkblue;
     border-radius: 25px;
-    padding: 5px;
+    padding: 10px;
+    opacity: 0.9;
 }

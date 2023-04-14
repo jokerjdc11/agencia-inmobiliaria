@@ -50,8 +50,8 @@
     transition: 0.6s;
 }
 
-.content-table {
-    margin: -210px 20px;
+.content-tables {
+    margin: 0px 20px;
     -webkit-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 2px 35px -3px rgba(0, 0, 0, 0.75);
