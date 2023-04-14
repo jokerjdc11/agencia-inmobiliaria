@@ -19,6 +19,8 @@ export class CreateComponent implements OnInit {
     'phone_number': 0,
     'identification': 0
   };
+  disabled: boolean = false;
+
 
   constructor(public admin: AdminService, private router: Router) {
 
@@ -26,6 +28,7 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.admin.registerCurrent) {
+      this.disabled = true;
       this.client = this.admin.registerCurrent;
     }
   }

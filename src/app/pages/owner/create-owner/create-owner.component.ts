@@ -19,12 +19,14 @@ export class CreateOwnerComponent implements OnInit {
     'identification': 0
   };
 
+  disabled: boolean = false;
   constructor(public admin: AdminService, private router: Router) {
 
   }
 
   ngOnInit(): void {
     if (this.admin.registerCurrent) {
+      this.disabled = true;
       this.owner = this.admin.registerCurrent;
     }
   }
