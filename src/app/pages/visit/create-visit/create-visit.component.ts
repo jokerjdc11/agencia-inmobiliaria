@@ -16,12 +16,15 @@ export class CreateVisitComponent implements OnInit {
     'comment': ''
   };
 
+  disabled: boolean = false;
+
   constructor(public admin: AdminService, private router: Router) {
 
   }
 
   ngOnInit(): void {
     if (this.admin.registerCurrent) {
+      this.disabled = true;
       this.visit = this.admin.registerCurrent;
     }
   }

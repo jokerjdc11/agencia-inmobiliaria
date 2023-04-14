@@ -14,6 +14,7 @@ export class CreateOfficeComponent implements OnInit {
     'id': 0,
     'phone_number': 0
   };
+  disabled: boolean = false;
 
   constructor(public admin: AdminService, private router: Router) {
 
@@ -21,6 +22,7 @@ export class CreateOfficeComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.admin.registerCurrent) {
+      this.disabled = true;
       this.office = this.admin.registerCurrent;
     }
   }

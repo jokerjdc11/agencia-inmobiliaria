@@ -25,13 +25,14 @@ export class CreateInmobiliariaComponent implements OnInit {
     "precio": 0,
     "referencia": 0
   };
-
+  disabled:boolean = false;
   constructor(public admin: AdminService, private router: Router) {
 
   }
 
   ngOnInit(): void {
     if (this.admin.registerCurrent) {
+      this.disabled = true;
       this.inmobiliaria = this.admin.registerCurrent;
     }
   }
