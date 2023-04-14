@@ -20,7 +20,7 @@
         <td>{{client.address}}</td>
         <td>{{client.identification}}</td>
         <td>{{client.phone_number}}</td>
-        <td><button type="button" class="btn btn-primary">Editar</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="editRegister(client)">Editar</button></td>
         <td><button type="button" class="btn btn-danger" (click)="deleteClient(i)">Eliminar</button></td>
       </tr>
     </tbody>

@@ -38,5 +38,10 @@ export class ClientComponent {
         Swal.fire('Changes are not saved', '', 'info')
       }
     })
-  }
+  };
+
+  editRegister(client: any) {
+    this.admin.registerCurrent = client;
+    this.router.navigate(['pages/client/create']);
+  };
 }

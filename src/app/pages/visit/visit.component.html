@@ -14,7 +14,7 @@
                 <th scope="row">{{visit.id}}</th>
                 <td>{{visit.date}}</td>
                 <td>{{visit.comment}}</td>
-                <td><button type="button" class="btn btn-primary">Editar</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="editRegister(visit)">Editar</button></td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRegister(i)">Eliminar</button></td>
             </tr>
         </tbody>

@@ -20,7 +20,7 @@
                 <td>{{owner.address}}</td>
                 <td>{{owner.identification}}</td>
                 <td>{{owner.phone_number}}</td>
-                <td><button type="button" class="btn btn-primary">Editar</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="editRegister(owner)">Editar</button></td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRegister(i)">Eliminar</button></td>
             </tr>
         </tbody>

@@ -37,5 +37,10 @@ export class OfficeComponent {
         Swal.fire('Changes are not saved', '', 'info')
       }
     })
-  }
+  };
+
+  editRegister(inmobiliaria: any) {
+    this.admin.registerCurrent = inmobiliaria;
+    this.router.navigate(['pages/offices/create']);
+  };
 }

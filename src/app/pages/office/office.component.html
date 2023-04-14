@@ -12,7 +12,7 @@
             <tr *ngFor="let office of this.admin.offices; index as i">
                 <th scope="row">{{office.id}}</th>
                 <td>{{office.phone_number}}</td>
-                <td><button type="button" class="btn btn-primary">Editar</button></td>
+                <td><button type="button" class="btn btn-primary" (click)="editRegister(office)">Editar</button></td>
                 <td><button type="button" class="btn btn-danger" (click)="deleteRegister(i)">Eliminar</button></td>
             </tr>
         </tbody>

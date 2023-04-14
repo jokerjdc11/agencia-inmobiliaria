@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./create.component.css']
 })
 
-export class CreateComponent implements OnInit{
+export class CreateComponent implements OnInit {
 
   client = {
     'id': 0,
@@ -30,10 +30,33 @@ export class CreateComponent implements OnInit{
     }
   }
 
-  addRegister(){
-    Swal.fire('Exito!', 'El registro ha sido ingresado', 'success');
+  addRegister() {
+    if (this.admin.registerCurrent) {
+      let objeto = this.admin.registerCurrent;
 
-    this.admin.clients.unshift(this.client);
-    this.router.navigate(['pages/clients']);
+      let id = objeto.id
+      let name = objeto.name
+      let last_name = objeto.last_name
+      let address = objeto.address
+      let identification = objeto.identification
+      let phone_number = objeto.phone_number
+
+      let posicionActual = this.admin.clients[id - 1];
+
+      posicionActual.id = id;
+      posicionActual.name = name;
+      posicionActual.last_name = last_name;
+      posicionActual.address = address;
+      posicionActual.identification = identification;
+      posicionActual.phone_number = phone_number;
+
+      Swal.fire('Exito!', 'Hemos modificado con éxito el registro', 'success');
+      this.router.navigate(['pages/clients']);
+    } else {
+      Swal.fire('Exito!', 'El registro ha sido ingresado', 'success');
+
+      this.admin.clients.unshift(this.client);
+      this.router.navigate(['pages/clients']);
+    }
   }
 }
